@@ -58,14 +58,14 @@
         {% if user.is_authenticated %}
           <a href="{% url 'blogapp:add_blog' %}" class="bg-blue-500 hover:bg-blue-600 text-white dark:bg-blue-600 dark:hover:bg-blue-700 dark:text-white font-medium py-2 px-4 rounded transition-all duration-500 ease-in-out">New Blog</a>
         <li>
-            <a href="/logout">Cierra Sesion</a>
+          <a href="{% url 'blogapp:logout' %}">Cierra Sesión</a>
         </li>
         {% else %}
         <li>
-          <a href="/registro">Registrate</a>
+          <a href="{% url 'blogapp:registro' %}">Regístrate</a>
         </li>
         <li>
-          <a href="login">Iniciar Sesion</a>
+          <a href="{% url 'blogapp:login' %}">Iniciar Sesión</a>
         </li>
         {% endif %}
       </div>

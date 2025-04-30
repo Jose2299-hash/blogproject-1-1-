@@ -23,7 +23,7 @@ def registro(request):
                 password=request.POST['password1']) 
                 user.save()
                 login(request, user)
-                return redirect('blogapp:inicio_sesion')
+                return redirect('blogapp:login')
             except IntegrityError:
                 return render(request, 'registro.html',{
                     'form': UserCreationForm,

@@ -3,7 +3,7 @@
 {% block content %}
 {{Error}}
 
-<form action="/registro/" method="post">
+<form method="POST" action="{% url 'blogapp:registro' %}">
     {% csrf_token %}
     {{form.as_p}}
 
